@@ -17,8 +17,12 @@ va applicato uno sconto del 40% per gli over 65.
 let numeroDikm = prompt('Inserisci il numero di kilometri');
 console.log(numeroDikm);
 
-let eta = prompt('Inserisci la età');
-console.log(eta);
+let eta1 = prompt('Inserisci numero tra 1 e 17');
+console.log(eta1);
+
+let eta2 = prompt('Inserisci numero tra 65 e 85');
+console.log(eta2);
+
 
 
 
