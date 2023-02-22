@@ -10,6 +10,10 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 
 il prezzo del biglietto è definito in base ai km (0.21 € al km)
 va applicato uno sconto del 20% per i minorenni
+-- per ticket con paolo --
+mentre gli over 65 pagano il 60% del prezzo el biglietto.
+
+-- no -- 
 va applicato uno sconto del 40% per gli over 65.
 */
 
@@ -20,12 +24,25 @@ console.log(numeroDikm);
 let eta = prompt('Inserisci l\'età');
 console.log(eta);
 
-let prezzoDelBiglietto = (0.21 * numeroDikm);
+let prezzo = (0.21 * numeroDikm);
+//prezzo biglietto - lo sconto del 20% 
 
-let prezzoMinorenni = (prezzoDelBiglietto * 20 / 100);
-console.log(prezzoMinorenni);
 
-let prezzoAnziani = (prezzoDelBiglietto * 40 / 100);
+
+if (eta < 18) {
+    prezzo = prezzo * 0.8
+
+} else if (eta > 65) {
+    prezzo = prezzo * 0.6
+}
+
+console.log(prezzo)
+
+alert(prezzo) 
+
+
+
+
 
 
 
