@@ -18,7 +18,7 @@ va applicato uno sconto del 40% per gli over 65.
 */
 
 
-let numeroDikm = prompt('Inserisci il numero di kilometri');
+let numeroDikm = prompt('Inserisci il numero di chilometri');
 console.log(numeroDikm);
 
 let eta = prompt('Inserisci l\'età');
@@ -27,18 +27,24 @@ console.log(eta);
 let prezzo = (0.21 * numeroDikm);
 //prezzo biglietto - lo sconto del 20% 
 
-
+let prezzoTotale = document.getElementById('prezzoTotale')
 
 if (eta < 18) {
     prezzo = prezzo * 0.8
 
+    document.getElementById('prezzoTotale').innerHTML = ` hai il diritto di sconto del 20% ${prezzo} €`;
+
+
 } else if (eta > 65) {
     prezzo = prezzo * 0.6
+
+    document.getElementById('prezzoTotale').innerHTML = ` hai il diritto di sconto del 40% ${prezzo} €`;
 }
 
 console.log(prezzo)
 
-alert(prezzo) 
+alert(prezzo)
+
 
 
 
